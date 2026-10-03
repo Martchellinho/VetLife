@@ -1,0 +1,539 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #24153d;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* HEADER */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #ffffff;
+    box-shadow: 0 2px 15px rgba(55, 15, 100, 0.08);
+}
+
+.header-content {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 110px;
+    display: block;
+}
+
+.nav {
+    display: flex;
+    gap: 30px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #32106b;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: #7c3aed;
+}
+
+.menu-btn {
+    display: none;
+    border: none;
+    background: transparent;
+    color: #32106b;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+    padding: 65px 0;
+    background: linear-gradient(135deg, #faf7ff, #efe3ff);
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero-tag,
+.section-title span,
+.contato-info > span {
+    color: #7c3aed;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+
+.hero-text h1 {
+    font-size: 52px;
+    line-height: 1.1;
+    margin: 18px 0 20px;
+    color: #28075f;
+}
+
+.hero-text p {
+    font-size: 18px;
+    color: #665b73;
+    max-width: 600px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    padding: 14px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: #5b189c;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background: #40106f;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    border: 2px solid #5b189c;
+    color: #5b189c;
+    background: transparent;
+}
+
+.btn-secondary:hover {
+    background: #5b189c;
+    color: #ffffff;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 380px;
+    border-radius: 25px;
+}
+
+/* TÍTULOS */
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 38px;
+    color: #28075f;
+    margin-top: 10px;
+}
+
+.section-title p {
+    max-width: 700px;
+    margin: 15px auto 0;
+    color: #6c6472;
+}
+
+/* SOBRE */
+
+.sobre {
+    padding: 90px 0;
+}
+
+.sobre-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.sobre-card {
+    padding: 30px;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 8px 30px rgba(61, 20, 100, 0.08);
+    border: 1px solid #eee4fa;
+}
+
+.sobre-card h3 {
+    color: #4a148c;
+    margin-bottom: 10px;
+}
+
+.sobre-card p {
+    color: #6d6573;
+}
+
+/* SERVIÇOS */
+
+.servicos {
+    padding: 90px 0;
+    background: #faf7ff;
+}
+
+.servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.servico-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(60, 20, 100, 0.07);
+    transition: 0.3s;
+}
+
+.servico-card:hover {
+    transform: translateY(-6px);
+}
+
+.servico-icon {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: #ead7ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+}
+
+.servico-card h3 {
+    color: #4a148c;
+    margin-bottom: 10px;
+}
+
+.servico-card p {
+    color: #6d6573;
+}
+
+/* EQUIPE */
+
+.equipe {
+    padding: 90px 0;
+}
+
+.equipe-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.profissional-card {
+    text-align: center;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 30px;
+    border: 1px solid #eee5f7;
+    box-shadow: 0 8px 25px rgba(60, 20, 100, 0.06);
+}
+
+.profissional-foto {
+    width: 120px;
+    height: 120px;
+    background: #ead7ff;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+}
+
+.profissional-card h3 {
+    color: #3b126f;
+}
+
+.profissional-card p {
+    color: #6d6573;
+}
+
+.profissional-card small {
+    color: #8c5cc5;
+}
+
+/* DIFERENCIAIS */
+
+.diferenciais {
+    padding: 90px 0;
+    background: #32106b;
+    color: #ffffff;
+}
+
+.diferenciais .section-title h2,
+.diferenciais .section-title span {
+    color: #ffffff;
+}
+
+.diferenciais-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.diferenciais-grid div {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 25px;
+    border-radius: 14px;
+}
+
+.diferenciais-grid strong {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.diferenciais-grid p {
+    color: #e8def5;
+}
+
+/* CONTATO */
+
+.contato {
+    padding: 90px 0;
+    background: #faf7ff;
+}
+
+.contato-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.contato-info h2 {
+    font-size: 40px;
+    margin: 12px 0;
+    color: #28075f;
+}
+
+.contato-info p {
+    color: #6d6573;
+}
+
+.contato-dados {
+    margin-top: 30px;
+}
+
+.contato-dados p {
+    margin-bottom: 12px;
+}
+
+.contato-form {
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(60, 20, 100, 0.08);
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    color: #3b126f;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #d8cbe7;
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #7c3aed;
+}
+
+/* FOOTER */
+
+.footer {
+    background: #1d0a3d;
+    color: #ffffff;
+    padding-top: 50px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.footer-logo img {
+    width: 120px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.footer h3 {
+    margin-bottom: 10px;
+}
+
+.footer p {
+    color: #ddd1ec;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 900px) {
+
+    .hero-content,
+    .contato-content {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-text p {
+        margin: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .sobre-cards,
+    .servicos-grid,
+    .equipe-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .diferenciais-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .header-content {
+        height: 72px;
+    }
+
+    .logo img {
+        width: 90px;
+    }
+
+    .nav {
+        position: absolute;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        flex-direction: column;
+        align-items: center;
+        padding: 25px;
+        display: none;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .hero {
+        padding: 55px 0;
+    }
+
+    .hero-text h1 {
+        font-size: 38px;
+    }
+
+    .hero-image img {
+        max-width: 300px;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+    .sobre-cards,
+    .servicos-grid,
+    .equipe-grid,
+    .diferenciais-grid,
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        text-align: center;
+        width: 100%;
+    }
+
+    .contato-form {
+        padding: 25px 20px;
+    }
+}
