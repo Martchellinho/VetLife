@@ -104,6 +104,12 @@ O Vet Life foi desenvolvido como projeto de portfólio com o objetivo de aplicar
 - Agendamento online com escolha de data e horário
 - Integração com mapa e localização da clínica
 
+## Site online
+
+Acesse a versão publicada do projeto:
+
+https://vetlife-one.vercel.app
+
 ## Autor
 
 Desenvolvido por **Martchellinho**.
